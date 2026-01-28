@@ -24,3 +24,24 @@ class RegisterView(generics.CreateAPIView):
 # We use the built-in SimpleJWT Login View
 class LoginView(TokenObtainPairView):
     permission_classes = [AllowAny]
+
+
+docker-compose run backend python src/manage.py makemigrations
+docker-compose run backend python src/manage.py migrate
+docker-compose run backend python src/manage.py createsuperuser
+
+POST /api/auth/register/
+{
+  "email": "user@test.com",
+  "password": "TestPass123"
+}
+
+POST /api/auth/login/
+{
+  "email": "user@test.com",
+  "password": "TestPass123"
+}
+
+git add .
+git commit -m "feat: implement custom user model and JWT authentication"
+git push
