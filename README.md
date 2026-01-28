@@ -40,3 +40,12 @@ This project is designed with collaboration at its core.
 
 ---
 *Created as part of the ProDev Backend Engineering Program - 2026.*
+
+alx-project-nexus/
+├── core/               # Django Project Settings
+├── api/                # Main API Logic
+├── products/           # Product & Category App
+├── users/              # Auth & JWT App
+├── manage.py
+├── .env
+└── docker-compose.yml
