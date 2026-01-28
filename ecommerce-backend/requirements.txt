@@ -1,1 +1,34 @@
+#ecommerce-backend
+
+ecommerce-backend/
+├── docker/
+│   └── entrypoint.sh
+├── src/
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── asgi.py
+│   │   └── wsgi.py
+│   ├── users/
+│   │   ├── migrations/
+│   │   ├── models.py
+│   │   ├── admin.py
+│   │   └── apps.py
+│   └── manage.py
+├── .env
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
+
+#requirements.txt
+
+Django>=5.0
+djangorestframework
+psycopg2-binary
+python-dotenv
+djangorestframework-simplejwt
+drf-spectacular
+
 
