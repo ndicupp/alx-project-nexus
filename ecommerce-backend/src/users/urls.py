@@ -7,3 +7,23 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='login'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
+
+docker-compose run backend python src/manage.py makemigrations
+docker-compose run backend python src/manage.py migrate
+docker-compose run backend python src/manage.py createsuperuser
+
+POST /api/auth/register/
+{
+  "email": "user@test.com",
+  "password": "TestPass123"
+}
+
+POST /api/auth/login/
+{
+  "email": "user@test.com",
+  "password": "TestPass123"
+}
+
+git add .
+git commit -m "feat: implement custom user model and JWT authentication"
+git push
