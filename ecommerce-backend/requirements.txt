@@ -31,4 +31,7 @@ python-dotenv
 djangorestframework-simplejwt
 drf-spectacular
 
+celery
+redis
+django-celery-results
 
