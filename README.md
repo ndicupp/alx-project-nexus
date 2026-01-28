@@ -26,7 +26,8 @@ This repository contains the backend system for a scalable, high-performance E-C
    git clone [https://github.com/](https://github.com/)[YOUR_USERNAME]/alx-project-nexus.git
    cd alx-project-nexus
 
-ecommerce-backend/
+## Project Status / Roadmap
+## ecommerce-backend/
 ├── docker/
 │   └── entrypoint.sh
 ├── src/
@@ -47,4 +48,5 @@ ecommerce-backend/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+
 
