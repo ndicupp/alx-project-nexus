@@ -36,4 +36,7 @@ urlpatterns = [
 ]
 
 docker-compose up --build
+docker-compose exec web python manage.py makemigrations users
+docker-compose exec web python manage.py migrate
+
 
