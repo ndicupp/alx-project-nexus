@@ -19,3 +19,23 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             last_name=validated_data.get('last_name', '')
         )
         return user
+
+docker-compose run backend python src/manage.py makemigrations
+docker-compose run backend python src/manage.py migrate
+docker-compose run backend python src/manage.py createsuperuser
+
+POST /api/auth/register/
+{
+  "email": "user@test.com",
+  "password": "TestPass123"
+}
+
+POST /api/auth/login/
+{
+  "email": "user@test.com",
+  "password": "TestPass123"
+}
+
+git add .
+git commit -m "feat: implement custom user model and JWT authentication"
+git push
