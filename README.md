@@ -31,14 +31,28 @@ This repository contains the backend system for a scalable, high-performance E-C
 - **API Docs:** drf-spectacular (Swagger UI)
 
 ---
+## API Doc Screenshots / Links
+
+API Docs: http://localhost:8000/api/docs/
 
 ## Getting Started (Docker)
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/](https://github.com/)[YOUR_USERNAME]/alx-project-nexus.git
-   cd alx-project-nexus
 
-## Project Status / Roadmap
+git clone https://github.com/ndicupp/alx-project-nexus.git
+cd alx-project-nexus
+docker compose up --build
+
+
+## Project Status
+
+✔ Docker + PostgreSQL + Custom User Done  
+✔ JWT Authentication API (To be built)  
+✔ Products & Categories APIs (Pending)  
+✔ Filtering, Sorting, Pagination (Pending)  
+✔ Comprehensive Tests (Pending)  
+
+
 ## ecommerce-backend/
 ├── docker/
 │   └── entrypoint.sh
@@ -253,10 +267,9 @@ Admin: http://localhost:8000/admin/
 
 Swagger: http://localhost:8000/api/docs/
 
-## Collaboration Hub
-This project is designed with collaboration at its core. 
-- **Frontend Integration:** API endpoints are documented via Swagger for seamless integration.
-- **Discord:** Active participant in the `#ProDevProjectNexus` channel.
+## Collaboration
+- Discord: #ProDevProjectNexus
+- Frontend API users should refer to Swagger
 
----
+
 *Created as part of the ProDev Backend Engineering Program - 2026.*
