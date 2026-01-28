@@ -10,6 +10,18 @@ This repository contains the backend system for a scalable, high-performance E-C
 - **Performance:** Efficient querying with indexing and pagination.
 
 ---
+## Challenges & Solutions
+
+| Challenge | Solution |
+| :--- | :--- |
+| **Environment Mismatch** | Implemented **Docker** to containerize the Django app and PostgreSQL database, ensuring "it works on my machine" translates to everyone's machine. |
+| **Slow API Responses** | Offloaded time-consuming tasks (like email notifications) to **Celery workers** to keep the main request-response cycle fast. |
+| **Documentation Clarity** | Integrated **Swagger/OpenAPI** to provide interactive documentation for frontend collaborators. |
+
+## Best Practices & Takeaways
+- **Test-Driven Development:** Writing unit and integration tests early to catch bugs before they reach production.
+- **Clean Code:** Adhering to PEP 8 standards and modular design for maintainability.
+- **Collaboration is Key:** Engaging with Frontend learners early in the lifecycle to define clear API contracts.
 
 ## Tech Stack
 - **Framework:** Django 5.0 + Django REST Framework (DRF)
@@ -240,3 +252,11 @@ Then:
 Admin: http://localhost:8000/admin/
 
 Swagger: http://localhost:8000/api/docs/
+
+## Collaboration Hub
+This project is designed with collaboration at its core. 
+- **Frontend Integration:** API endpoints are documented via Swagger for seamless integration.
+- **Discord:** Active participant in the `#ProDevProjectNexus` channel.
+
+---
+*Created as part of the ProDev Backend Engineering Program - 2026.*
