@@ -20,3 +20,7 @@ git push
 
 docker-compose run backend python src/manage.py startapp categories
 docker-compose run backend python src/manage.py startapp products
+
+docker-compose run backend python src/manage.py makemigrations
+docker-compose run backend python src/manage.py migrate
+
