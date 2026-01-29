@@ -21,12 +21,7 @@ ecommerce-backend/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
-
-docker-compose run backend django-admin startproject core src
-
-docker-compose run backend python src/manage.py startapp users
-
-
+    
 #users/models.py
 
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
