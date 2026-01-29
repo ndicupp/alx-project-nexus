@@ -84,3 +84,6 @@ SIMPLE_JWT = {
 docker-compose run backend python src/manage.py startapp categories
 docker-compose run backend python src/manage.py startapp products
 
+pip install django-filter
+
+INSTALLED_APPS += ["django_filters"]
