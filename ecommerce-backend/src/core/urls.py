@@ -73,3 +73,6 @@ git push
 
 docker-compose run backend python src/manage.py startapp categories
 docker-compose run backend python src/manage.py startapp products
+
+path("api/categories/", include("categories.urls")),
+path("api/products/", include("products.urls")),
