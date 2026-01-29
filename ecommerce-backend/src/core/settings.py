@@ -118,3 +118,23 @@ SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_PATCH': True,
     'COMPONENT_SPLIT_REQUEST': True,
 }
+
+
+pip install django-filter
+
+
+INSTALLED_APPS = [
+    # ...
+    'django_filters',
+]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',   # For Search
+        'rest_framework.filters.OrderingFilter', # For Sorting
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 12, # Standard e-commerce grid size (3x4 or 4x3)
+}
+
