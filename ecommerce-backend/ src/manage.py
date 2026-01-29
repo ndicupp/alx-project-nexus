@@ -223,5 +223,7 @@ git add .
 git commit -m "feat: implement custom user model and JWT authentication"
 git push
 
+docker-compose run backend python src/manage.py startapp categories
+docker-compose run backend python src/manage.py startapp products
 
 
