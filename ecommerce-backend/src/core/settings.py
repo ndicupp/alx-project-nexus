@@ -99,3 +99,22 @@ git add .
 git commit -m "feat: add product and category models with CRUD, filtering, and pagination"
 git push
 
+INSTALLED_APPS = [
+    # ... other apps
+    'drf_spectacular',
+]
+
+REST_FRAMEWORK = {
+    # This line tells DRF to use spectacular for docs
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Nexus E-Commerce API',
+    'DESCRIPTION': 'Professional backend for the Project Nexus Job/Product Catalog.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # This groups your endpoints by app name in the UI
+    'COMPONENT_SPLIT_PATCH': True,
+    'COMPONENT_SPLIT_REQUEST': True,
+}
