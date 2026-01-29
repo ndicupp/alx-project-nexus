@@ -76,3 +76,25 @@ docker-compose run backend python src/manage.py startapp products
 
 path("api/categories/", include("categories.urls")),
 path("api/products/", include("products.urls")),
+
+
+from django.urls import path
+from drf_spectacular.views import (
+    SpectacularAPIView, 
+    SpectacularRedocView, 
+    SpectacularSwaggerView
+)
+
+urlpatterns = [
+    # ... your other URLs (admin, apps)
+    
+    # 1. The Schema (YAML/JSON raw file)
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    
+    # 2. Swagger UI (Interactive & Colorful)
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    
+    # 3. Redoc (Clean & Minimalist alternative)
+    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+]
+
