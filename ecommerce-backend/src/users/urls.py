@@ -30,3 +30,9 @@ git push
 
 docker-compose run backend python src/manage.py startapp categories
 docker-compose run backend python src/manage.py startapp products
+
+import debug_toolbar
+
+urlpatterns = [
+    path("__debug__/", include(debug_toolbar.urls)),
+] + urlpatterns
