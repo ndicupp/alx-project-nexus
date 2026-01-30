@@ -32,3 +32,13 @@ class ProductViewSet(viewsets.ModelViewSet):
     search_fields = ["name", "description"]
     ordering_fields = ["price", "created_at"]
     ordering = ["-created_at"]
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = (
+        Product.objects
+        .filter(is_active=True)
+        .select_related("category")
+    )
+    serializer_class = ProductSerializer
+
