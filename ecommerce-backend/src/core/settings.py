@@ -138,3 +138,8 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 12, # Standard e-commerce grid size (3x4 or 4x3)
 }
 
+
+if DEBUG:
+    INSTALLED_APPS += ['debug_toolbar']
+    MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
+    INTERNAL_IPS = ['127.0.0.1'] # Standard for Docker/Local
