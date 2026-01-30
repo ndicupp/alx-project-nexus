@@ -277,5 +277,8 @@ Swagger UI: https://<your-domain>/api/docs/
 
 Postman Collection: Available in `/docs/postman/`
 
+git add apps/catalog/views.py docs/ README.md
+git commit -m "docs(api): organize Swagger tags and add Postman collection" -m "Grouped endpoints by module in Swagger and added a pre-configured Postman collection for faster mentor review."
+git push origin main
 
 *Created as part of the ProDev Backend Engineering Program - 2026.*
