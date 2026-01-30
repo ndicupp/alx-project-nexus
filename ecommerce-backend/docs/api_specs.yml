@@ -1,1 +1,12 @@
+/api/docs/
+
+from drf_spectacular.utils import extend_schema
+
+@extend_schema(
+    summary="User Login",
+    description="Authenticate user and return JWT access and refresh tokens",
+    tags=["Authentication"],
+)
+class LoginView(TokenObtainPairView):
+    pass
 
