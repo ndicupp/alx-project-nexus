@@ -36,3 +36,8 @@ class ProductListView(generics.ListAPIView):
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
 
+
+git add apps/catalog/views.py docs/ README.md
+git commit -m "docs(api): organize Swagger tags and add Postman collection" -m "Grouped endpoints by module in Swagger and added a pre-configured Postman collection for faster mentor review."
+git push origin main
+
