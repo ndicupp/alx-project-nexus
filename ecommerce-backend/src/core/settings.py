@@ -148,3 +148,19 @@ if DEBUG:
 git add apps/catalog/models.py apps/catalog/views.py core/settings.py
 git commit -m "perf(database): implement query profiling and composite indexing" -m "Added Django Debug Toolbar for profiling, implemented PostgreSQL functional indexes, and optimized QuerySets with select_related."
 git push origin main
+
+INSTALLED_APPS += [
+    "drf_spectacular",
+]
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "ProDev E-Commerce API",
+    "DESCRIPTION": "Backend API for Product Catalog, Authentication, and Discovery",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
+
