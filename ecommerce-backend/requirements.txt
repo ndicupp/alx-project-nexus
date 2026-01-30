@@ -35,3 +35,6 @@ celery
 redis
 django-celery-results
 
+django-debug-toolbar
+
+
