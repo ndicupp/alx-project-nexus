@@ -28,4 +28,11 @@ git add apps/catalog/models.py apps/catalog/views.py core/settings.py
 git commit -m "perf(database): implement query profiling and composite indexing" -m "Added Django Debug Toolbar for profiling, implemented PostgreSQL functional indexes, and optimized QuerySets with select_related."
 git push origin main
 
+from drf_spectacular.utils import extend_schema
+
+class ProductListView(generics.ListAPIView):
+    # This tag groups the endpoint in Swagger
+    @extend_schema(tags=['Products'], summary="List all active products with filters")
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
 
