@@ -271,5 +271,11 @@ Swagger: http://localhost:8000/api/docs/
 - Discord: #ProDevProjectNexus
 - Frontend API users should refer to Swagger
 
+## 📄 API Documentation
+
+Swagger UI: https://<your-domain>/api/docs/
+
+Postman Collection: Available in `/docs/postman/`
+
 
 *Created as part of the ProDev Backend Engineering Program - 2026.*
