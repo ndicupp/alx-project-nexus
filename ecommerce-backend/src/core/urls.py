@@ -104,3 +104,7 @@ import debug_toolbar
 urlpatterns = [
     path("__debug__/", include(debug_toolbar.urls)),
 ] + urlpatterns
+
+git add .
+git commit -m "perf: add database indexes and optimize product queries"
+git push
