@@ -143,3 +143,8 @@ if DEBUG:
     INSTALLED_APPS += ['debug_toolbar']
     MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
     INTERNAL_IPS = ['127.0.0.1'] # Standard for Docker/Local
+
+
+git add apps/catalog/models.py apps/catalog/views.py core/settings.py
+git commit -m "perf(database): implement query profiling and composite indexing" -m "Added Django Debug Toolbar for profiling, implemented PostgreSQL functional indexes, and optimized QuerySets with select_related."
+git push origin main
