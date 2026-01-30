@@ -44,3 +44,10 @@ class Product(BaseModel):
 
     def __str__(self):
         return self.name
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, unique=True, db_index=True)
+    slug = models.SlugField(unique=True, db_index=True)
+
+docker-compose run backend python src/manage.py makemigrations
+docker-compose run backend python src/manage.py migrate
