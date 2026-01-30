@@ -15,3 +15,17 @@ class ProductListView(generics.ListAPIView):
     
     # Define which fields the Search bar looks at
     search_fields = ['name', 'description']
+
+class ProductListView(generics.ListAPIView):
+    # 'select_related' for foreign keys (Category)
+    # 'only' to fetch only the fields we need (reduces memory usage)
+    queryset = Product.objects.filter(is_active=True).select_related('category').only(
+        'name', 'price', 'slug', 'category__name'
+    )
+    # ... rest of the view
+
+git add apps/catalog/models.py apps/catalog/views.py core/settings.py
+git commit -m "perf(database): implement query profiling and composite indexing" -m "Added Django Debug Toolbar for profiling, implemented PostgreSQL functional indexes, and optimized QuerySets with select_related."
+git push origin main
+
+
