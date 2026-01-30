@@ -37,4 +37,7 @@ django-celery-results
 
 django-debug-toolbar
 
+pip install drf-spectacular
+
+
 
