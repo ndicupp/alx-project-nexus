@@ -10,3 +10,15 @@ from drf_spectacular.utils import extend_schema
 class LoginView(TokenObtainPairView):
     pass
 
+SPECTACULAR_SETTINGS["COMPONENTS"] = {
+    "securitySchemes": {
+        "BearerAuth": {
+            "type": "http",
+            "scheme": "bearer",
+            "bearerFormat": "JWT",
+        }
+    }
+}
+
+Authorization: Bearer <token>
+
