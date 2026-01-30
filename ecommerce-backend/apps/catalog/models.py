@@ -23,3 +23,8 @@ class Product(BaseModel):
             models.Index(fields=['name'], name='product_name_idx'),
             models.Index(Lower('name'), name='product_name_lower_idx'),
         ]
+
+
+git add apps/catalog/models.py apps/catalog/views.py core/settings.py
+git commit -m "perf(database): implement query profiling and composite indexing" -m "Added Django Debug Toolbar for profiling, implemented PostgreSQL functional indexes, and optimized QuerySets with select_related."
+git push origin main
