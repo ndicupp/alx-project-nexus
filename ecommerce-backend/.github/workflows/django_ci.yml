@@ -1,1 +1,33 @@
+name: Django CI
 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres:15
+        env:
+          POSTGRES_DB: nexus_db
+          POSTGRES_USER: nexus_user
+          POSTGRES_PASSWORD: nexus_password
+        ports:
+          - 5432:5432
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+    - name: Install Dependencies
+      run: pip install -r requirements.txt
+    - name: Run Tests
+      run: python manage.py test
+      env:
+        SECRET_KEY: "ci-secret-key"
+        DATABASE_URL: "postgres://nexus_user:nexus_password@localhost:5432/nexus_db"
