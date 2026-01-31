@@ -1,4 +1,3 @@
-![CI](https://github.com/ndicupp/alx-project-nexus/actions/workflows/ci.yml/badge.svg)
 
 
 # Nexus ProDev E-Commerce Backend
