@@ -31,3 +31,8 @@ jobs:
       env:
         SECRET_KEY: "ci-secret-key"
         DATABASE_URL: "postgres://nexus_user:nexus_password@localhost:5432/nexus_db"
+
+
+git add apps/users/tests.py .github/workflows/django_ci.yml
+git commit -m "ci(testing): implement automated unit tests and GitHub Actions pipeline" -m "Added tests for Custom User model and configured CI to run tests on every push to main."
+git push origin main
