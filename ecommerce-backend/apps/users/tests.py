@@ -16,3 +16,7 @@ class UserTaskTests(TestCase):
         admin_user = User.objects.create_superuser(email='admin@example.com', password='password123')
         self.assertTrue(admin_user.is_superuser)
         self.assertTrue(admin_user.is_staff)
+
+git add apps/users/tests.py .github/workflows/django_ci.yml
+git commit -m "ci(testing): implement automated unit tests and GitHub Actions pipeline" -m "Added tests for Custom User model and configured CI to run tests on every push to main."
+git push origin main
