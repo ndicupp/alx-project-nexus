@@ -1,1 +1,5 @@
 web: gunicorn core.wsgi
+
+git add core/settings.py Procfile requirements.txt
+git commit -m "build(deploy): configure production settings and database for hosting"
+git push origin main
