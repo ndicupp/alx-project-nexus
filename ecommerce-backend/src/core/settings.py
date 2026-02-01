@@ -181,3 +181,8 @@ DATABASES = {
 # Static files for Swagger UI to look pretty in production
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+git add core/settings.py Procfile requirements.txt
+git commit -m "build(deploy): configure production settings and database for hosting"
+git push origin main
