@@ -5,7 +5,6 @@
 [![Django CI](https://github.com/ndicupp/alx-project-nexus/actions/workflows/django_ci.yml/badge.svg)](https://github.com/ndicupp/alx-project-nexus/actions)
 [![Live API](https://img.shields.io/badge/Status-Live-green)
 
----
 
 ## Project Overview
 Project Nexus is a high-performance backend API built with **Django REST Framework** and **PostgreSQL**. It features a custom user authentication system, advanced product cataloging with optimized search/filter logic, and a fully automated CI/CD pipeline.
