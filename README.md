@@ -12,7 +12,7 @@ Project Nexus is a high-performance backend API built with **Django REST Framewo
 ### 🔗 Submission Tasks (Quick Links)
 - **Task 1: [Database Design (ERD)](https://docs.google.com/document/d/1HW6078MxmKjO-ZuE1n1WBdoPR27dkJNdBSEElXtfX7w/edit?tab=t.qoxd5zbp2iev)**
 - **Task 2: [Presentation Slide Deck](https://docs.google.com/presentation/d/1HvkuyPSA-G_T6awKftwv_N08OwxLSbd7vgOr6VtaFnA/edit?slide=id.p#slide=id.p)**
-- **Task 3: [Project Demo Video](YOUR_YOUTUBE_OR_DRIVE_LINK_HERE)**
+- **Task 3: [Project Demo Video](https://drive.google.com/file/d/1BR1mWcH8fpBA6OAj2Jql19vdiggHKutY/view?usp=sharing)**
 - **Task 4: [Live Hosted API]**
 
 ---
