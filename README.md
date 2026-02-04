@@ -3,7 +3,7 @@
 **An Optimized, Professional-Grade E-Commerce API**
 
 [![Django CI](https://github.com/ndicupp/alx-project-nexus/actions/workflows/django_ci.yml/badge.svg)](https://github.com/ndicupp/alx-project-nexus/actions)
-[![Live API](https://img.shields.io/badge/Status-Live-green)
+
 
 
 ## Project Overview
